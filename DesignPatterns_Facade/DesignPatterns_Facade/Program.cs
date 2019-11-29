@@ -7,8 +7,8 @@ namespace DesignPatterns_Facade
         static void Main(string[] args)
         {
             Console.WriteLine("Design Patterns - Facade!");
-            SimpleClient client = new SimpleClient();
-            client.JustDoIt();
+            Facade facade = new Facade();
+            facade.JustDoIt();
         }
     }
 
@@ -42,10 +42,10 @@ namespace DesignPatterns_Facade
         void JustDoIt();
     }
 
-    class SimpleClient : ISimpleFacade
+    class Facade : ISimpleFacade
     {
         private SuperComplexLibrary _library;
-        public SimpleClient()
+        public Facade()
         {
             _library = new SuperComplexLibrary();
         }
